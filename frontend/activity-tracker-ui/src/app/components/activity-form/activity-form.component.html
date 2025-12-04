@@ -1,0 +1,43 @@
+<div style="margin-top:1rem;">
+  <div style="font-size:0.9rem; font-weight:600; margin-bottom:0.4rem;">
+    Log New Activity
+  </div>
+
+  <form (ngSubmit)="submit()">
+    <div style="margin-bottom:0.6rem;">
+      <label style="font-size:0.8rem;">Title</label>
+      <input [(ngModel)]="title" name="title" required maxlength="140" />
+    </div>
+
+    <div style="margin-bottom:0.6rem;">
+      <label style="font-size:0.8rem;">Description</label>
+      <textarea [(ngModel)]="description" name="description" rows="2" maxlength="2000"></textarea>
+    </div>
+
+    <div class="grid grid-cols-2" style="margin-bottom:0.6rem;">
+      <div>
+        <label style="font-size:0.8rem;">Type</label>
+        <select [(ngModel)]="type" name="type">
+          <option value="CODING">Coding</option>
+          <option value="CODE_REVIEW">Code review</option>
+          <option value="DESIGN">Design</option>
+          <option value="TESTING">Testing</option>
+          <option value="DOCUMENTATION">Documentation</option>
+        </select>
+      </div>
+      <div>
+        <label style="font-size:0.8rem;">Date</label>
+        <input type="date" [(ngModel)]="activityDate" name="activityDate" required />
+      </div>
+    </div>
+
+    <div style="margin-bottom:0.6rem;">
+      <label style="font-size:0.8rem;">Duration (minutes)</label>
+      <input type="number" [(ngModel)]="durationMinutes" name="durationMinutes" min="1" />
+    </div>
+
+    <button class="button button-primary" type="submit" [disabled]="saving">
+      Log Activity
+    </button>
+  </form>
+</div>

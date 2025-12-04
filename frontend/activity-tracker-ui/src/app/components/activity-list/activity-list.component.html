@@ -1,0 +1,43 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-title">
+        Activities for {{ project.name }}
+      </div>
+      <div class="card-subtitle">
+        Logged work and coding sessions.
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="loading" style="margin-top:0.5rem;">
+    Loading activities...
+  </div>
+
+  <div *ngFor="let activity of activities" class="card" style="margin-top:0.75rem;">
+    <div class="card-header">
+      <div>
+        <div class="card-title" style="font-size:1rem;">
+          {{ activity.title }}
+        </div>
+        <div class="card-subtitle">
+          {{ activity.description || 'No description.' }}
+        </div>
+      </div>
+      <div style="text-align:right;">
+        <span class="badge badge-neutral">
+          {{ activity.type }}
+        </span>
+        <div style="font-size:0.8rem; color:#9ca3af; margin-top:0.35rem;">
+          {{ activity.activityDate | date:'mediumDate' }} · {{ activity.durationMinutes }} min
+        </div>
+        <button class="button button-danger" style="margin-top:0.35rem;"
+                (click)="deleteActivity(activity)">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <app-activity-form [project]="project" (created)="onCreated()"></app-activity-form>
+</div>

@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #0b1120;
+  color: #e5e7eb;
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.card {
+  background-color: #020617;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #1e293b;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.card-subtitle {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+.button {
+  border-radius: 9999px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  border: none;
+  cursor: pointer;
+}
+
+.button-primary {
+  background: linear-gradient(to right, #6366f1, #22c55e);
+  color: white;
+}
+
+.button-secondary {
+  background-color: #0f172a;
+  color: #e5e7eb;
+}
+
+.button-danger {
+  background-color: #b91c1c;
+  color: #f9fafb;
+}
+
+input, select, textarea {
+  width: 100%;
+  background-color: #020617;
+  border: 1px solid #1e293b;
+  color: #e5e7eb;
+  border-radius: 0.5rem;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 1px solid #4f46e5;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 9999px;
+  border: 1px solid #1e293b;
+}
+
+.badge-success {
+  border-color: #22c55e;
+  color: #bbf7d0;
+}
+
+.badge-warning {
+  border-color: #f59e0b;
+  color: #fed7aa;
+}
+
+.badge-neutral {
+  border-color: #64748b;
+  color: #e5e7eb;
+}

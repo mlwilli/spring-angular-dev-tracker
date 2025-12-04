@@ -1,0 +1,39 @@
+<div class="card">
+  <div class="card-header">
+    <div>
+      <div class="card-title">
+        {{ project ? 'Edit Project' : 'New Project' }}
+      </div>
+      <div class="card-subtitle">
+        {{ project ? 'Update project details.' : 'Create a new project.' }}
+      </div>
+    </div>
+  </div>
+
+  <form (ngSubmit)="submit()" style="margin-top:0.75rem;">
+    <div style="margin-bottom:0.6rem;">
+      <label style="font-size:0.8rem;">Name</label>
+      <input [(ngModel)]="name" name="name" required maxlength="140" />
+    </div>
+
+    <div style="margin-bottom:0.6rem;">
+      <label style="font-size:0.8rem;">Description</label>
+      <textarea [(ngModel)]="description" name="description" rows="3" maxlength="2000"></textarea>
+    </div>
+
+    <div style="margin-bottom:0.6rem;">
+      <label style="font-size:0.8rem;">Status</label>
+      <select [(ngModel)]="status" name="status">
+        <option value="PLANNED">Planned</option>
+        <option value="IN_PROGRESS">In progress</option>
+        <option value="ON_HOLD">On hold</option>
+        <option value="COMPLETED">Completed</option>
+        <option value="CANCELLED">Cancelled</option>
+      </select>
+    </div>
+
+    <button class="button button-primary" type="submit" [disabled]="saving">
+      {{ project ? 'Save Changes' : 'Create Project' }}
+    </button>
+  </form>
+</div>
