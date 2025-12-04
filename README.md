@@ -1,7 +1,7 @@
 # Dev Activity Tracker
 
 A proof of concept application built with **Spring Boot (Java 21)** and **Angular**, used to track development projects and their related activities. 
-The backend provides a REST API for creating projects and logging activity sessions, while the frontend offers a clean UI for viewing and managing that data.
+The backend is a REST API for creating projects and logging activity sessions, while the frontend offers a clean UI for viewing and managing that data.
 
 ### Backend
 - Java 21  
